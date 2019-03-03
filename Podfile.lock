@@ -1,0 +1,33 @@
+PODS:
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - SideMenu (4.0.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
+  - SideMenu (~> 4.0.0)
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GoogleMaps
+    - GooglePlaces
+    - SideMenu
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 38c8f25f16bb2a671ec225eaa2acc12ac953a6a8
+
+COCOAPODS: 1.6.1
