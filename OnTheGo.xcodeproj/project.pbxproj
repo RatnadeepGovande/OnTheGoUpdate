@@ -33,7 +33,7 @@
 		F37757E9222ABC16005A3EDC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757E8222ABC16005A3EDC /* CategoryViewController.swift */; };
 		F37757EE222AC4AF005A3EDC /* JobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F37757ED222AC4AF005A3EDC /* JobSeeker.storyboard */; };
 		F37757F0222AC6B0005A3EDC /* JobSeekerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757EF222AC6B0005A3EDC /* JobSeekerTabBarController.swift */; };
-		F37757F2222AEADB005A3EDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757F1222AEADB005A3EDC /* HomeViewController.swift */; };
+		F37757F2222AEADB005A3EDC /* JobHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757F1222AEADB005A3EDC /* JobHomeViewController.swift */; };
 		F3775814222BBC83005A3EDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3775813222BBC83005A3EDC /* UIKit.framework */; };
 		F3FF49A521B841260065F41D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FF49A421B841260065F41D /* RegistrationViewController.swift */; };
 		F3FF49A721B8496A0065F41D /* background_video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = F3FF49A621B849690065F41D /* background_video.MOV */; };
@@ -97,7 +97,7 @@
 		F37757E8222ABC16005A3EDC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F37757ED222AC4AF005A3EDC /* JobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobSeeker.storyboard; sourceTree = "<group>"; };
 		F37757EF222AC6B0005A3EDC /* JobSeekerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSeekerTabBarController.swift; sourceTree = "<group>"; };
-		F37757F1222AEADB005A3EDC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F37757F1222AEADB005A3EDC /* JobHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHomeViewController.swift; sourceTree = "<group>"; };
 		F3775813222BBC83005A3EDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F3FF49A421B841260065F41D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		F3FF49A621B849690065F41D /* background_video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = background_video.MOV; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				F37757EF222AC6B0005A3EDC /* JobSeekerTabBarController.swift */,
-				F37757F1222AEADB005A3EDC /* HomeViewController.swift */,
+				F37757F1222AEADB005A3EDC /* JobHomeViewController.swift */,
 			);
 			path = JobSeeker;
 			sourceTree = "<group>";
@@ -575,7 +575,7 @@
 				5016783E21B793B500BCFA50 /* BaseViewController.swift in Sources */,
 				5016785421BE46FE00BCFA50 /* NetworkManager.swift in Sources */,
 				F3FF49A521B841260065F41D /* RegistrationViewController.swift in Sources */,
-				F37757F2222AEADB005A3EDC /* HomeViewController.swift in Sources */,
+				F37757F2222AEADB005A3EDC /* JobHomeViewController.swift in Sources */,
 				F37757E42229B3F9005A3EDC /* CreatePasswordView.swift in Sources */,
 				5016784221B793F200BCFA50 /* MainViewController.swift in Sources */,
 				F37757E7222A789D005A3EDC /* LoginViewController.swift in Sources */,
