@@ -16,80 +16,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheGo/NetworkManager/EndPoint/OnTheGoEndPoint.swift"
-            timestampString = "573913359.539969"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "task"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OnTheGo/Controller/InitialController/RegistrationViewController.swift"
-            timestampString = "573913359.540156"
+            filePath = "OnTheGo/View/InitalView/OTPConfirmationView.swift"
+            timestampString = "573924983.958321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "otpReg(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OnTheGo.RegistrationViewController.otpReg(Swift.String) -&gt; ()"
-                  moduleName = "OnTheGo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ratnadeep/Downloads/OnTheGo/OnTheGo/Controller/InitialController/RegistrationViewController.swift"
-                  timestampString = "573913359.726167"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in OnTheGo.RegistrationViewController.otpReg(Swift.String) -&gt; ()"
-                  moduleName = "OnTheGo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ratnadeep/Downloads/OnTheGo/OnTheGo/Controller/InitialController/RegistrationViewController.swift"
-                  timestampString = "573913359.7297831"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "33">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheGo/View/InitalView/MobileNumberView.swift"
-            timestampString = "573913359.540257"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "calld(_:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "proceedBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -99,46 +35,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OnTheGo/View/InitalView/MobileNumberView.swift"
-            timestampString = "573913359.540904"
+            filePath = "OnTheGo/View/InitalView/OTPConfirmationView.swift"
+            timestampString = "573924983.958582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "calld(_:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "proceedBtnAction(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in OnTheGo.MobileNumberView.calld(Swift.String) -&gt; ()"
-                  moduleName = "OnTheGo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ratnadeep/Downloads/OnTheGo/OnTheGo/View/InitalView/MobileNumberView.swift"
-                  timestampString = "573913359.743638"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "768">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #2 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in OnTheGo.MobileNumberView.calld(Swift.String) -&gt; ()"
-                  moduleName = "OnTheGo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ratnadeep/Downloads/OnTheGo/OnTheGo/View/InitalView/MobileNumberView.swift"
-                  timestampString = "573913359.746466"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnTheGo/NetworkManager/NetworkManager.swift"
+            timestampString = "573924983.958745"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "otpVerificationAPI(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnTheGo/NetworkManager/NetworkManager.swift"
+            timestampString = "573924983.9593379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "otpVerificationAPI(_:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

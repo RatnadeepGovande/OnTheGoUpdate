@@ -11,7 +11,7 @@ import SVProgressHUD
 
 protocol MobileNumberViewDelegate: NSObjectProtocol {
     func didCancelLogin()
-    func didConfirmMobile(_ mobileNumber: String)
+    func didConfirmMobile(_ data:[String:String])
 }
 
 class MobileNumberView: UIView {
@@ -39,10 +39,12 @@ class MobileNumberView: UIView {
             
             DispatchQueue.main.async {
                 print("\(String(describing: data!["data"]))")
-                let dataR : [String:Any] =  data!["data"] as! [String:Any]
+                var dataR : [String:Any] =  data!["data"] as! [String:Any]
                 
+                dataR["mobile"] = mobilenumber
                 print(dataR["request_id"]!)
-                self.delegate.didConfirmMobile(mobilenumber)
+                
+                self.delegate.didConfirmMobile(dataR as! [String : String])
             }
         }
     }

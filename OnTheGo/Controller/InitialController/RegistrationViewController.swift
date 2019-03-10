@@ -52,11 +52,11 @@ class RegistrationViewController: UIViewController {
     }
     
     
-    func otpReg(_ mobilenumber: String) {
+    func otpReg(_ logData: [String:String]) {
         DispatchQueue.main.async {
 //            SVProgressHUD.dismiss()
-            self.mobileNumber = mobilenumber
-            self.otpConfirmationView.mobileNumber = self.mobileNumber
+//            self.mobileNumber = mobilenumber
+            self.otpConfirmationView.logReponseData = logData
             self.moveOTPViewRightToLeft()
         }
 
@@ -92,9 +92,9 @@ extension RegistrationViewController: MobileNumberViewDelegate {
         self.delegate.didCancelLogin()
 
     }
-    func didConfirmMobile(_ mobileNumber: String) {
+    func didConfirmMobile(_ data:[String:String]) {
         
-        otpReg(mobileNumber)
+        otpReg(data)
     }
 }
 

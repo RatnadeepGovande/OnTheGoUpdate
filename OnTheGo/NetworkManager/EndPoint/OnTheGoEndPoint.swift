@@ -13,6 +13,7 @@ enum NetworkEnvironment {
 }
 public enum OnTheGoAPI {
     case login(_ parameter: [String: String])
+    case otpVerification(_ parameter: [String:String])
     
 }
 
@@ -33,6 +34,9 @@ extension OnTheGoAPI: EndPointType {
         switch self {
         case .login:
             return "index.php/v1/login"
+        case .otpVerification:
+            return "index.php/v1/verify_otp"
+
         }
     }
     
@@ -40,14 +44,18 @@ extension OnTheGoAPI: EndPointType {
         switch self {
         case .login(_):
             return .post
+        case .otpVerification(_):
+            return .post
         }
     }
     
     var task: HTTPTask {
         switch self {
         case .login(let parameters):
-            print(parameters)
             return .requestParameters(bodyParameters: parameters, bodyEncoding: .jsonEncoding, urlParameters: nil)
+        case .otpVerification(let parameters):
+            
+            return .requestParameters(bodyParameters: parameters, bodyEncoding: .jsonEncoding, urlParameters: nil)            
         }
     }
     
