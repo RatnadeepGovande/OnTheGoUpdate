@@ -55,31 +55,13 @@ class RegistrationViewController: UIViewController {
     func otpReg(_ mobilenumber: String) {
         DispatchQueue.main.async {
 //            SVProgressHUD.dismiss()
+            self.mobileNumber = mobilenumber
+            self.otpConfirmationView.mobileNumber = self.mobileNumber
             self.moveOTPViewRightToLeft()
         }
 
         return
-            
-//        SVProgressHUD.show()
-//        self.mobileNumber = mobilenumber
-//
-//        NetworkManager.shareInstant.postrequest(.sendOTP, parameter: ["phone":"\(mobilenumber)"]) { (data, error) in
-//            if error == nil {
-//                print("data : \(String(describing: data))")
-//                self.sessionIDStr = data!["sessionID"] as? String
-//
-//                let indexStartOfText = self.sessionIDStr .index(self.sessionIDStr .startIndex, offsetBy: 1) // 3
-//                let indexEndOfText = self.sessionIDStr .index(self.sessionIDStr .endIndex, offsetBy: -1)    // 8
-//
-//                self.sessionIDStr = String(self.sessionIDStr[indexStartOfText..<indexEndOfText])
-//                DispatchQueue.main.async {
-//                    SVProgressHUD.dismiss()
-//                    self.moveOTPViewRightToLeft()
-//                }
-//            }else{
-//
-//            }
-//        }
+        
     }
     
   
@@ -132,16 +114,16 @@ extension RegistrationViewController: OTPConfirmationDelegate {
         
         
         let parameters = ["session":self.sessionIDStr!,"phone":self.mobileNumber!, "otp":otpStr]
-        NetworkManager.shareInstant.postrequest(.otpVerify, parameter: parameters) { (data, error) in
-            if error == nil {
-                print("otpVerify data : \(String(describing: data))")
-                DispatchQueue.main.async {
-                    SVProgressHUD.dismiss()
-                    self.moveCreateRightToLeft()
-                }
-            }else {
-            }
-        }
+//        NetworkManager.shareInstant.postrequest(.otpVerify, parameter: parameters) { (data, error) in
+//            if error == nil {
+//                print("otpVerify data : \(String(describing: data))")
+//                DispatchQueue.main.async {
+//                    SVProgressHUD.dismiss()
+//                    self.moveCreateRightToLeft()
+//                }
+//            }else {
+//            }
+//        }
 }
 }
 

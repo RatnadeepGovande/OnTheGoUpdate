@@ -7,50 +7,71 @@
 //
 
 import Foundation
+enum NetworkResponse: String {
+    case success
+    case badRequest = "Bad request"
+    case failed = "Network request failed"
+    case noData = "Response returned with no data to decode"
+    case unableToDecode = "We could not decode the response"
+}
 
-class NetworkManager {
-    static let shareInstant = NetworkManager()
-    private init () {
-        
-    }
+enum Result<String> {
+    case success
+    case failure(String)
+}
+struct NetworkManager {
     
+    static let environment : NetworkEnvironment = .production
     
-    func postrequest(_ requestType: OnTheGoURL, parameter: [String: String], complitionHanlder: @escaping ([String:String]?, Error?) -> Void) {
-        let endpoint = requestType
-        var request =  endpoint.request
-        request.httpMethod = "POST"
+    let router = Router<OnTheGoAPI>()
+    
+    func loginAPI(mobileNumber: String, completion:@escaping(_ data:[String: Any]?, _ error:String?)->()) {
         
-        guard let  data = self.requestedParameter(parameter) else {
-            return print("not data")
-        }
-        request.httpBody = data
-        let urlSession  =  URLSession.init(configuration: .default)
-
-        let task =   urlSession.dataTask(with: request) { (data1, response, error) in
-            
+        print("mobile name \(mobileNumber)")
+        router.request(.login(["mobile":mobileNumber])) { (data, response, error) in
             if error != nil {
-                print(error?.localizedDescription)
-            }else {
-                do {
-                    let jsonData = try JSONSerialization.jsonObject(with: data1!, options: .mutableLeaves)
-                    complitionHanlder(jsonData as? [String : String], nil)
-                }catch {
-                    print("Data error : \(error.localizedDescription)")
-                }
+                completion(nil,"No Network")
+                return
             }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        
+                        let jsonData  = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
+                      
+                        
+                        completion(jsonData as? [String : Any],nil)
+                    }catch {
+                        print(error)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+
+            }
+        
         }
-        task.resume()
         
     }
     
-    func requestedParameter(_ parameter: [String: String]) -> Data? {
-        do {
-            let data = try JSONSerialization.data(withJSONObject: parameter, options: .prettyPrinted)
-            return data
-        }catch {
-            print("\(error.localizedDescription)")
-        }
-        return nil
+    func otpVerificationAPI() {
+        
     }
     
+    fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
+        switch response.statusCode {
+        case 200...299: return .success
+        case 501...599: return .failure(NetworkResponse.badRequest.rawValue)
+        default: return .failure(NetworkResponse.failed.rawValue)
+        }
+    }
 }

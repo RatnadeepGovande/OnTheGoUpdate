@@ -160,12 +160,12 @@
                             <constraint firstItem="Uvv-3d-Sxm" firstAttribute="trailing" secondItem="Ws2-lr-VXa" secondAttribute="trailing" id="ac9-u6-6Fv"/>
                             <constraint firstItem="WTs-Iy-gmm" firstAttribute="top" secondItem="Ws2-lr-VXa" secondAttribute="top" constant="22" id="cau-Gc-uKE"/>
                             <constraint firstItem="rKH-cB-jbI" firstAttribute="bottom" secondItem="Ws2-lr-VXa" secondAttribute="bottom" id="dYz-BR-56k"/>
-                            <constraint firstItem="Uvv-3d-Sxm" firstAttribute="bottom" secondItem="Ws2-lr-VXa" secondAttribute="bottom" id="l6S-M3-rwV"/>
                             <constraint firstItem="W8b-gf-gcX" firstAttribute="leading" secondItem="Ws2-lr-VXa" secondAttribute="leading" constant="12" id="nyh-kG-dhv"/>
                             <constraint firstItem="Uvv-3d-Sxm" firstAttribute="leading" secondItem="Ws2-lr-VXa" secondAttribute="leading" id="r94-Fd-j1I"/>
                             <constraint firstItem="Uvv-3d-Sxm" firstAttribute="top" secondItem="XtL-vX-L8k" secondAttribute="top" id="rsP-YG-goD"/>
                             <constraint firstItem="rKH-cB-jbI" firstAttribute="centerX" secondItem="Ws2-lr-VXa" secondAttribute="centerX" id="sFj-Vb-cO7"/>
                             <constraint firstItem="rKH-cB-jbI" firstAttribute="width" secondItem="XtL-vX-L8k" secondAttribute="width" multiplier="0.96" id="vXe-vp-siy"/>
+                            <constraint firstAttribute="bottom" secondItem="Uvv-3d-Sxm" secondAttribute="bottom" id="x0y-YE-Y2O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ws2-lr-VXa"/>
                     </view>

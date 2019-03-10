@@ -16,7 +16,11 @@ protocol OTPConfirmationDelegate: NSObjectProtocol {
 class OTPConfirmationView: UIView {
     weak var delegate: OTPConfirmationDelegate!
     @IBOutlet weak var otpTxt: UITextField!
+    var mobileNumber: String?
+    
     @IBAction func proceedBtnAction(_ sender: UIButton) {
+        
+        
         self.delegate.didOTPProceed(otpTxt.text!)
     }
     @IBAction func cancelBtnAction(_ sender: Any) {

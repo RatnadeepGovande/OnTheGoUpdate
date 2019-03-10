@@ -12,23 +12,27 @@ import GoogleMaps
 
 class JobHomeViewController: UIViewController {
 
-    @IBOutlet weak var customMapView: UIView!
+    @IBOutlet weak var customMapView: GMSMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        
-        customMapView = mapView
+        customMapView.camera = camera
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         marker.title = "Sydney"
         marker.snippet = "Australia"
-        marker.map = mapView
+        marker.map = customMapView
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    
+    }
+
     @IBAction func menuBtnAction(_ sender: UIButton) {
         present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
 

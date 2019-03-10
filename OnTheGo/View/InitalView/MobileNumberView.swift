@@ -17,14 +17,11 @@ protocol MobileNumberViewDelegate: NSObjectProtocol {
 class MobileNumberView: UIView {
     weak var delegate:MobileNumberViewDelegate!
     @IBOutlet weak var mobileTxt: UITextField!
-    
     @IBAction func confirmBtnAction(_ sender: UIButton) {
-        
         guard let txt = mobileTxt.text, isVaildNumber(txt) else {
             print("txt not....")
             return
         }
-        
         print("\(txt)")
         calld(txt)        
     }
@@ -35,26 +32,19 @@ class MobileNumberView: UIView {
         DispatchQueue.main.async {
             SVProgressHUD.dismiss()
         }
-        self.delegate.didConfirmMobile(mobilenumber)
-
-        /*
-        NetworkManager.shareInstant.postrequest(.sendOTP, parameter: ["phone":"\(mobilenumber)"]) { (data, error) in
-            if error == nil {
-                print("data : \(String(describing: data))")
-//                self.sessionIDStr = data!["sessionID"] as? String
-//                let indexStartOfText = self.sessionIDStr .index(self.sessionIDStr .startIndex, offsetBy: 1) // 3
-//                let indexEndOfText = self.sessionIDStr .index(self.sessionIDStr .endIndex, offsetBy: -1)    // 8
-//                self.sessionIDStr = String(self.sessionIDStr[indexStartOfText..<indexEndOfText])
-                DispatchQueue.main.async {
-                    SVProgressHUD.dismiss()
-                    
-                }
-            }else{
+        NetworkManager().loginAPI(mobileNumber: mobilenumber) { (data, error) in
+            if error != nil {
+                print("Error : \(String(describing: error))")
+            }
+            
+            DispatchQueue.main.async {
+                print("\(String(describing: data!["data"]))")
+                let dataR : [String:Any] =  data!["data"] as! [String:Any]
                 
+                print(dataR["request_id"]!)
+                self.delegate.didConfirmMobile(mobilenumber)
             }
         }
-        */
-    
     }
     
     func isVaildNumber(_ number: String)->Bool {

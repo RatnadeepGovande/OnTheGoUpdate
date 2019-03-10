@@ -15,9 +15,6 @@
 		5016784D21B949CB00BCFA50 /* bg_video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5016784C21B949CB00BCFA50 /* bg_video1.mp4 */; };
 		5016785121BE403300BCFA50 /* bg_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5016785021BE403300BCFA50 /* bg_video.mp4 */; };
 		5016785421BE46FE00BCFA50 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016785321BE46FE00BCFA50 /* NetworkManager.swift */; };
-		5016785621BE6DCF00BCFA50 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016785521BE6DCF00BCFA50 /* Endpoint.swift */; };
-		5016785821BE72CA00BCFA50 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016785721BE72CA00BCFA50 /* Result.swift */; };
-		5016785A21BE731F00BCFA50 /* GenericAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016785921BE731F00BCFA50 /* GenericAPIClient.swift */; };
 		50D3D52E21B4E6AE00146D4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3D52D21B4E6AE00146D4A /* AppDelegate.swift */; };
 		50D3D53321B4E6AE00146D4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D3D53121B4E6AE00146D4A /* Main.storyboard */; };
 		50D3D53621B4E6AE00146D4A /* OnTheGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50D3D53421B4E6AE00146D4A /* OnTheGo.xcdatamodeld */; };
@@ -35,6 +32,14 @@
 		F37757F0222AC6B0005A3EDC /* JobSeekerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757EF222AC6B0005A3EDC /* JobSeekerTabBarController.swift */; };
 		F37757F2222AEADB005A3EDC /* JobHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757F1222AEADB005A3EDC /* JobHomeViewController.swift */; };
 		F3775814222BBC83005A3EDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3775813222BBC83005A3EDC /* UIKit.framework */; };
+		F383577422342EEC005B6DE1 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383577322342EEC005B6DE1 /* ParameterEncoding.swift */; };
+		F3835776223431F5005B6DE1 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3835775223431F5005B6DE1 /* URLParameterEncoder.swift */; };
+		F38357782234374A005B6DE1 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38357772234374A005B6DE1 /* JSONParameterEncoder.swift */; };
+		F383577B2234399E005B6DE1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383577A2234399E005B6DE1 /* HTTPMethod.swift */; };
+		F383577D22343A76005B6DE1 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383577C22343A76005B6DE1 /* EndPointType.swift */; };
+		F383577F22343B3F005B6DE1 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383577E22343B3F005B6DE1 /* HTTPTask.swift */; };
+		F383578122343FEA005B6DE1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383578022343FEA005B6DE1 /* Router.swift */; };
+		F3835784223446B9005B6DE1 /* OnTheGoEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3835783223446B9005B6DE1 /* OnTheGoEndPoint.swift */; };
 		F3FF49A521B841260065F41D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FF49A421B841260065F41D /* RegistrationViewController.swift */; };
 		F3FF49A721B8496A0065F41D /* background_video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = F3FF49A621B849690065F41D /* background_video.MOV */; };
 		F3FF49A921B849FA0065F41D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FF49A821B849FA0065F41D /* AVFoundation.framework */; };
@@ -70,9 +75,6 @@
 		5016784C21B949CB00BCFA50 /* bg_video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg_video1.mp4; sourceTree = "<group>"; };
 		5016785021BE403300BCFA50 /* bg_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg_video.mp4; sourceTree = "<group>"; };
 		5016785321BE46FE00BCFA50 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		5016785521BE6DCF00BCFA50 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		5016785721BE72CA00BCFA50 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		5016785921BE731F00BCFA50 /* GenericAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAPIClient.swift; sourceTree = "<group>"; };
 		50D3D52A21B4E6AE00146D4A /* OnTheGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D3D52D21B4E6AE00146D4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D3D53221B4E6AE00146D4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 		F37757EF222AC6B0005A3EDC /* JobSeekerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSeekerTabBarController.swift; sourceTree = "<group>"; };
 		F37757F1222AEADB005A3EDC /* JobHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHomeViewController.swift; sourceTree = "<group>"; };
 		F3775813222BBC83005A3EDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F383577322342EEC005B6DE1 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		F3835775223431F5005B6DE1 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		F38357772234374A005B6DE1 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		F383577A2234399E005B6DE1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F383577C22343A76005B6DE1 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		F383577E22343B3F005B6DE1 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		F383578022343FEA005B6DE1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F3835783223446B9005B6DE1 /* OnTheGoEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheGoEndPoint.swift; sourceTree = "<group>"; };
 		F3FF49A421B841260065F41D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		F3FF49A621B849690065F41D /* background_video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = background_video.MOV; sourceTree = "<group>"; };
 		F3FF49A821B849FA0065F41D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -164,10 +174,10 @@
 		5016785221BE467E00BCFA50 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				F38357822234466A005B6DE1 /* EndPoint */,
+				F38357792234396C005B6DE1 /* Service */,
+				F383577222342ED0005B6DE1 /* Encoding */,
 				5016785321BE46FE00BCFA50 /* NetworkManager.swift */,
-				5016785521BE6DCF00BCFA50 /* Endpoint.swift */,
-				5016785721BE72CA00BCFA50 /* Result.swift */,
-				5016785921BE731F00BCFA50 /* GenericAPIClient.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -304,6 +314,35 @@
 				F37757ED222AC4AF005A3EDC /* JobSeeker.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F383577222342ED0005B6DE1 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				F383577322342EEC005B6DE1 /* ParameterEncoding.swift */,
+				F3835775223431F5005B6DE1 /* URLParameterEncoder.swift */,
+				F38357772234374A005B6DE1 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		F38357792234396C005B6DE1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F383577A2234399E005B6DE1 /* HTTPMethod.swift */,
+				F383577C22343A76005B6DE1 /* EndPointType.swift */,
+				F383577E22343B3F005B6DE1 /* HTTPTask.swift */,
+				F383578022343FEA005B6DE1 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F38357822234466A005B6DE1 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				F3835783223446B9005B6DE1 /* OnTheGoEndPoint.swift */,
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,22 +603,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5016785821BE72CA00BCFA50 /* Result.swift in Sources */,
 				F37757F0222AC6B0005A3EDC /* JobSeekerTabBarController.swift in Sources */,
 				50D3D53621B4E6AE00146D4A /* OnTheGo.xcdatamodeld in Sources */,
 				F37757E9222ABC16005A3EDC /* CategoryViewController.swift in Sources */,
 				50D3D52E21B4E6AE00146D4A /* AppDelegate.swift in Sources */,
-				5016785A21BE731F00BCFA50 /* GenericAPIClient.swift in Sources */,
-				5016785621BE6DCF00BCFA50 /* Endpoint.swift in Sources */,
+				F383577422342EEC005B6DE1 /* ParameterEncoding.swift in Sources */,
+				F383577B2234399E005B6DE1 /* HTTPMethod.swift in Sources */,
+				F3835776223431F5005B6DE1 /* URLParameterEncoder.swift in Sources */,
 				F37757E22229B3BE005A3EDC /* OTPConfirmationView.swift in Sources */,
 				5016783E21B793B500BCFA50 /* BaseViewController.swift in Sources */,
 				5016785421BE46FE00BCFA50 /* NetworkManager.swift in Sources */,
 				F3FF49A521B841260065F41D /* RegistrationViewController.swift in Sources */,
 				F37757F2222AEADB005A3EDC /* JobHomeViewController.swift in Sources */,
 				F37757E42229B3F9005A3EDC /* CreatePasswordView.swift in Sources */,
+				F383578122343FEA005B6DE1 /* Router.swift in Sources */,
 				5016784221B793F200BCFA50 /* MainViewController.swift in Sources */,
 				F37757E7222A789D005A3EDC /* LoginViewController.swift in Sources */,
+				F383577F22343B3F005B6DE1 /* HTTPTask.swift in Sources */,
 				5016784921B8EA1100BCFA50 /* MobileNumberView.swift in Sources */,
+				F38357782234374A005B6DE1 /* JSONParameterEncoder.swift in Sources */,
+				F3835784223446B9005B6DE1 /* OnTheGoEndPoint.swift in Sources */,
+				F383577D22343A76005B6DE1 /* EndPointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

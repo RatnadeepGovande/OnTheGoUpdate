@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,8 +24,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hfN-as-C4U" secondAttribute="bottom" id="4Il-D1-akO"/>
                             <constraint firstItem="hfN-as-C4U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fsg-Fq-e0h"/>
-                            <constraint firstItem="hfN-as-C4U" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Gc5-co-bcp"/>
                             <constraint firstItem="hfN-as-C4U" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="PG2-WG-AQP"/>
                             <constraint firstItem="hfN-as-C4U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jpW-x4-9By"/>
                         </constraints>
