@@ -454,6 +454,10 @@
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="confrimPasswordTxt" destination="3sQ-K9-J4A" id="NYd-ei-RWF"/>
+                                    <outlet property="passwordTxt" destination="tbH-Z9-FW7" id="Qmu-rn-gDT"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33000000000000002" alpha="0.32000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -498,6 +502,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
+                                    <action selector="submitBtnAction:" destination="YFI-Cx-rre" eventType="touchUpInside" id="7S3-Us-8C6"/>
                                     <action selector="sumbitBtnAction:" destination="YFI-Cx-rre" eventType="touchUpInside" id="wEr-q7-tGZ"/>
                                 </connections>
                             </button>
@@ -540,6 +545,9 @@
                                                             <constraint firstAttribute="width" constant="34" id="ffA-ML-Ela"/>
                                                         </constraints>
                                                         <state key="normal" image="radio-off-button"/>
+                                                        <connections>
+                                                            <action selector="jobSeekerBtnAction:" destination="YFI-Cx-rre" eventType="touchUpInside" id="rWg-jG-f6m"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -571,6 +579,9 @@
                                                             <constraint firstAttribute="width" constant="34" id="gkp-cl-eFT"/>
                                                         </constraints>
                                                         <state key="normal" image="radio-off-button"/>
+                                                        <connections>
+                                                            <action selector="employerBtnAction:" destination="YFI-Cx-rre" eventType="touchUpInside" id="AMp-3d-k2f"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -604,6 +615,9 @@
                                                     <constraint firstAttribute="height" constant="34" id="qxo-t2-OQb"/>
                                                 </constraints>
                                                 <state key="normal" image="radio-off-button"/>
+                                                <connections>
+                                                    <action selector="agencyBtnAction:" destination="YFI-Cx-rre" eventType="touchUpInside" id="8XJ-I8-w8I"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -643,6 +657,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y0Z-uM-9Fr"/>
                     </view>
+                    <connections>
+                        <outlet property="agencyBtn" destination="biy-p7-ixm" id="hSR-6h-FYX"/>
+                        <outlet property="employerBtn" destination="CWz-12-lDV" id="teo-nr-SW7"/>
+                        <outlet property="jobSeekerBtn" destination="Ax8-A4-ipu" id="Cv8-6m-gsx"/>
+                        <outlet property="submitBtn" destination="Jh3-Py-NTK" id="QXA-Ha-vwP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTM-Gj-sBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -696,6 +716,9 @@
                                                 <color key="backgroundColor" red="0.0" green="0.49019607840000001" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="loginBtnAction:" destination="NQs-CC-qEH" eventType="touchUpInside" id="eJK-2G-DdV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="071-Ml-rG7">
                                                 <rect key="frame" x="149.5" y="0.0" width="129.5" height="44"/>
@@ -742,6 +765,8 @@
                     <connections>
                         <outlet property="loginContentHzCenterConstraint" destination="QBc-pV-5YG" id="8h6-kg-0hQ"/>
                         <outlet property="loginView" destination="MaW-uI-qOb" id="1kX-PL-xEc"/>
+                        <outlet property="passwordTxt" destination="jwi-Zf-Xex" id="8HG-hk-dym"/>
+                        <outlet property="usernameTxt" destination="Nam-wX-hvi" id="UcX-zi-8ir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHi-wX-ihN" userLabel="First Responder" sceneMemberID="firstResponder"/>

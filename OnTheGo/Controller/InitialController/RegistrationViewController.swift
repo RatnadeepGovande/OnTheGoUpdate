@@ -12,6 +12,7 @@ import SVProgressHUD
 protocol RegistrationViewControllerDelegate: NSObjectProtocol {
     func didCancelLogin()
 }
+
 class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var mobileViewHzCenterConstraint: NSLayoutConstraint!
@@ -52,19 +53,12 @@ class RegistrationViewController: UIViewController {
     }
     
     
-    func otpReg(_ logData: [String:String]) {
+    func otpReg(_ logData: [String:Any]) {
         DispatchQueue.main.async {
-//            SVProgressHUD.dismiss()
-//            self.mobileNumber = mobilenumber
             self.otpConfirmationView.logReponseData = logData
             self.moveOTPViewRightToLeft()
         }
-
-        return
-        
     }
-    
-  
     
     func moveOTPViewRightToLeft() {
         self.mobileViewHzCenterConstraint.constant = -500.0
@@ -86,54 +80,4 @@ class RegistrationViewController: UIViewController {
     }
 }
 
-extension RegistrationViewController: MobileNumberViewDelegate {
-    func didCancelLogin() {
-        self.dismiss(animated: true, completion: nil)
-        self.delegate.didCancelLogin()
 
-    }
-    func didConfirmMobile(_ data:[String:String]) {
-        
-        otpReg(data)
-    }
-}
-
-
-extension RegistrationViewController: OTPConfirmationDelegate {
-    func didOTPCancelAction(){
-        self.dismiss(animated: true, completion: nil)
-        self.delegate.didCancelLogin()
-    }
-    
-    func didOTPProceed(_ otpStr: String){
-        SVProgressHUD.show()
-        SVProgressHUD.dismiss()
-        self.moveCreateRightToLeft()
-        
-        return
-        
-        
-        let parameters = ["session":self.sessionIDStr!,"phone":self.mobileNumber!, "otp":otpStr]
-//        NetworkManager.shareInstant.postrequest(.otpVerify, parameter: parameters) { (data, error) in
-//            if error == nil {
-//                print("otpVerify data : \(String(describing: data))")
-//                DispatchQueue.main.async {
-//                    SVProgressHUD.dismiss()
-//                    self.moveCreateRightToLeft()
-//                }
-//            }else {
-//            }
-//        }
-}
-}
-
-extension RegistrationViewController:CreatePasswordDelegate {
-    func didConfirm(){
-        let categoryController: CategoryViewController =  storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
-        self.present(categoryController, animated: true, completion: nil)
-    }
-    func didPasswordCancel(){
-        self.dismiss(animated: true, completion: nil)
-        self.delegate.didCancelLogin()
-    }
-}

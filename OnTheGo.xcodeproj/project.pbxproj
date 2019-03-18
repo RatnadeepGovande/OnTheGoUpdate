@@ -24,6 +24,7 @@
 		50D3D55121B4E6B200146D4A /* OnTheGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D3D55021B4E6B200146D4A /* OnTheGoUITests.swift */; };
 		88E4CE94017CEF084E10B00B /* Pods_OnTheGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5A05D1B83FA063A57F3781 /* Pods_OnTheGo.framework */; };
 		B7B6DE5D605E1C7117D5DC74 /* Pods_OnTheGoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57FDE1373E41C61DB45B3B78 /* Pods_OnTheGoUITests.framework */; };
+		F37684B9223D0D96001AD681 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37684B8223D0D96001AD681 /* Utility.swift */; };
 		F37757E22229B3BE005A3EDC /* OTPConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757E12229B3BE005A3EDC /* OTPConfirmationView.swift */; };
 		F37757E42229B3F9005A3EDC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757E32229B3F9005A3EDC /* CreatePasswordView.swift */; };
 		F37757E7222A789D005A3EDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37757E6222A789D005A3EDC /* LoginViewController.swift */; };
@@ -93,6 +94,7 @@
 		A0265A0623A4A57DD351AC60 /* Pods-OnTheGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheGo/Pods-OnTheGo.debug.xcconfig"; sourceTree = "<group>"; };
 		BFDC29D681E90DA1267F46D8 /* Pods-OnTheGoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheGoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheGoUITests/Pods-OnTheGoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E07769CF5523384E1AB5E3F3 /* Pods-OnTheGoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheGoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheGoUITests/Pods-OnTheGoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F37684B8223D0D96001AD681 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		F37757E12229B3BE005A3EDC /* OTPConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPConfirmationView.swift; sourceTree = "<group>"; };
 		F37757E32229B3F9005A3EDC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		F37757E6222A789D005A3EDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		50D3D52C21B4E6AE00146D4A /* OnTheGo */ = {
 			isa = PBXGroup;
 			children = (
+				F37684B7223D0D78001AD681 /* Utility */,
 				F37757EC222AC3DC005A3EDC /* Storyboard */,
 				F37757E02229B189005A3EDC /* View */,
 				5016785221BE467E00BCFA50 /* NetworkManager */,
@@ -267,6 +270,14 @@
 				57FDE1373E41C61DB45B3B78 /* Pods_OnTheGoUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F37684B7223D0D78001AD681 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F37684B8223D0D96001AD681 /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		F37757E02229B189005A3EDC /* View */ = {
@@ -617,6 +628,7 @@
 				F37757F2222AEADB005A3EDC /* JobHomeViewController.swift in Sources */,
 				F37757E42229B3F9005A3EDC /* CreatePasswordView.swift in Sources */,
 				F383578122343FEA005B6DE1 /* Router.swift in Sources */,
+				F37684B9223D0D96001AD681 /* Utility.swift in Sources */,
 				5016784221B793F200BCFA50 /* MainViewController.swift in Sources */,
 				F37757E7222A789D005A3EDC /* LoginViewController.swift in Sources */,
 				F383577F22343B3F005B6DE1 /* HTTPTask.swift in Sources */,

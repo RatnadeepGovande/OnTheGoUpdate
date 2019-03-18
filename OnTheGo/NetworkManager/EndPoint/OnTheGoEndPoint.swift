@@ -14,7 +14,8 @@ enum NetworkEnvironment {
 public enum OnTheGoAPI {
     case login(_ parameter: [String: String])
     case otpVerification(_ parameter: [String:String])
-    
+    case createPassword(_ parameter:[String: String])
+    case selectCategory(_ parameter:[String: String])
 }
 
 extension OnTheGoAPI: EndPointType {
@@ -22,7 +23,7 @@ extension OnTheGoAPI: EndPointType {
     var enviromentBaseURL: String {
         switch  NetworkManager.environment {
         case .production:
-            return "http://3.18.115.109/workondemand"
+            return "http://3.18.115.109/workondemand/index.php/v1"
         }
     }
     var baseURL: URL {
@@ -33,9 +34,13 @@ extension OnTheGoAPI: EndPointType {
     var path: String {
         switch self {
         case .login:
-            return "index.php/v1/login"
+            return "login"
         case .otpVerification:
-            return "index.php/v1/verify_otp"
+            return "verify_otp"
+        case .createPassword:
+            return "create_password"
+        case .selectCategory:
+            return "select_category"
 
         }
     }
@@ -46,6 +51,11 @@ extension OnTheGoAPI: EndPointType {
             return .post
         case .otpVerification(_):
             return .post
+        case .createPassword:
+            return .post
+        case .selectCategory:
+            return .post
+
         }
     }
     
@@ -54,8 +64,11 @@ extension OnTheGoAPI: EndPointType {
         case .login(let parameters):
             return .requestParameters(bodyParameters: parameters, bodyEncoding: .jsonEncoding, urlParameters: nil)
         case .otpVerification(let parameters):
-            
-            return .requestParameters(bodyParameters: parameters, bodyEncoding: .jsonEncoding, urlParameters: nil)            
+            return .requestParameters(bodyParameters: parameters, bodyEncoding: .jsonEncoding, urlParameters: nil)
+        case .createPassword(let parameters):
+            return .requestParameters(bodyParameters: parameters, bodyEncoding: .jsonEncoding, urlParameters: nil)
+        case .selectCategory(let parameters):
+            return .requestParameters(bodyParameters: parameters, bodyEncoding: .jsonEncoding, urlParameters: nil)
         }
     }
     

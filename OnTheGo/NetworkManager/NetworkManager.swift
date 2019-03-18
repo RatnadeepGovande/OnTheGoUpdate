@@ -60,6 +60,8 @@ struct NetworkManager {
     }
     
     func otpVerificationAPI(_ parameters: [String: String], completion:@escaping(_ data:[String:Any]?, _ error:String?)->()) {
+        
+        
         router.request(.otpVerification(parameters)) { (data, response, error) in
             
             if error != nil {
@@ -78,6 +80,71 @@ struct NetworkManager {
                         let jsonData  = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
                         
                         completion(jsonData as? [String : Any],nil)
+                        
+                    }catch {
+                        print(error)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+    
+    func createPassword(_ parameter:[String: String], completion:@escaping(_ data:[String:Any]?, _ error:String?) -> ()) {
+        router.request(.createPassword(parameter)) { (data, response, error) in
+            
+            if error != nil {
+                completion(nil,"No Network")
+                return
+            }
+            
+            if let respone = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(respone)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        let jsonData  = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
+                        
+                        completion(jsonData as? [String : Any],nil)
+                        
+                    }catch {
+                        print(error)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+    
+    
+    func categoryAPI(_ parameters: [String:String], completion:@escaping(_ data: [String:Any]?, _ error:String?) -> ()){
+        router.request(.selectCategory(parameters)) { (data, response, error) in
+            
+            if error != nil {
+                completion(nil,"No Network")
+                return
+            }
+            
+            if let respone = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(respone)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        let jsonData: [String : Any] = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as! [String : Any]
+                        let sData = jsonData["data"]
+                        completion((sData as! [String : Any]),nil)
                         
                     }catch {
                         print(error)
